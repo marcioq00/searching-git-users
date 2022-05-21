@@ -1,0 +1,117 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #0D1117;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;  
+    flex-wrap: wrap;
+}
+.box {
+    display: flex;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    background-color: lightblue;
+    flex-wrap: wrap;
+}
+.searchDevBox { 
+     background-color: red;
+     /* border-bottom: 3px solid gold; */
+     height: 25%;
+     width: 100%;
+}
+.imageBox {
+    background-color: yellow;
+    width: 50%;
+}
+.repositoryInformationBox {
+    background-color: purple;
+    width: 50%;
+}
+
+.bioInformationBox {
+    background-color: aqua;
+    width: 50%;
+}
+.referenceDevBox {
+    background-color: greenyellow;
+    width: 50%;
+}
+
+
+
+/* .test {
+    display: grid;
+    grid-template-columns: 200px minmax(100px, auto) minmax(100px, auto);
+    grid-template-rows: 100px minmax(100px, auto) minmax(auto, 50px) minmax(auto, 50px) minmax(auto, 50px);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(38, 7, 148);
+    background-color: transparent;
+    width: 700px;
+    height: 500px;
+} */
+/* .search-box {
+    border: 1px solid white;
+    padding: 10px;
+    margin-bottom: 20px;
+    grid-row: 1;
+    grid-column: 1 / 4;
+}
+.login {
+    background-color: yellowgreen;
+}
+#avatar_url img {
+    background-color: white;
+    border-radius: 120px;
+    width: 150px;
+    height: 150px;
+}
+#avatar_url {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+}
+#name {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    font-size: 26px;
+}
+#login {
+    grid-column: 1;
+    grid-row: 4;
+    text-align: center;
+}
+#bio {
+    grid-column: 1;
+    grid-row: 5;
+}
+#lokation {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: rgb(187, 187, 187);
+}
+ #company {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: rgb(187, 187, 187);
+} 
+#blog {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: rgb(187, 187, 187);
+}
+#twitter_username {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: rgb(187, 187, 187);
+} */
