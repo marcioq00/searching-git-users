@@ -16,8 +16,8 @@ body {
 }
 .box {
     display: flex;
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     text-align: center;
     background-color: lightblue;
     flex-wrap: wrap;
@@ -25,93 +25,71 @@ body {
 .searchDevBox { 
      background-color: red;
      /* border-bottom: 3px solid gold; */
-     height: 25%;
+     height: 20%;
      width: 100%;
 }
+
 .imageBox {
-    background-color: yellow;
-    width: 50%;
+    background-color: rgb(53, 110, 216);
+    height: 30%;
+    width: 25%;
 }
+
+.imageBox img {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+}
+
 .repositoryInformationBox {
     background-color: purple;
-    width: 50%;
+    height: 30%;
+    width: 75%;
+}
+
+.repoInformation {
+    background-color: blue;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 70%;
 }
 
 .bioInformationBox {
     background-color: aqua;
-    width: 50%;
+    height: 50%;
+    width: 25%;
 }
 .referenceDevBox {
     background-color: greenyellow;
-    width: 50%;
+    height: 50%;
+    width: 75%;
 }
 
-
-
-/* .test {
-    display: grid;
-    grid-template-columns: 200px minmax(100px, auto) minmax(100px, auto);
-    grid-template-rows: 100px minmax(100px, auto) minmax(auto, 50px) minmax(auto, 50px) minmax(auto, 50px);
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid rgb(38, 7, 148);
-    background-color: transparent;
-    width: 700px;
-    height: 500px;
-} */
-/* .search-box {
-    border: 1px solid white;
-    padding: 10px;
+.aboutDevBox {
+    background-color: aliceblue;
+    border-radius: 20px;
+    height: 40%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
-    grid-row: 1;
-    grid-column: 1 / 4;
+    margin-top: 20px;
+    color: #000;
+    /* margin: 10px; */
 }
-.login {
-    background-color: yellowgreen;
+
+.socialDevBox {
+    background-color: teal;
+    border-radius: 20px;
+    height: 40%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 10px; */
 }
-#avatar_url img {
-    background-color: white;
-    border-radius: 120px;
-    width: 150px;
-    height: 150px;
-}
-#avatar_url {
-    grid-column: 1;
-    grid-row: 2;
-    padding: 10px;
-}
-#name {
-    grid-column: 1;
-    grid-row: 3;
-    text-align: center;
-    font-size: 26px;
-}
-#login {
-    grid-column: 1;
-    grid-row: 4;
-    text-align: center;
-}
-#bio {
-    grid-column: 1;
-    grid-row: 5;
-}
-#lokation {
-    grid-column: 2 / 4;
-    grid-row: 2;
-    background-color: rgb(187, 187, 187);
-}
- #company {
-    grid-column: 3;
-    grid-row: 2;
-    background-color: rgb(187, 187, 187);
-} 
-#blog {
-    grid-column: 2;
-    grid-row: 3;
-    background-color: rgb(187, 187, 187);
-}
-#twitter_username {
-    grid-column: 3;
-    grid-row: 3;
-    background-color: rgb(187, 187, 187);
-} */
