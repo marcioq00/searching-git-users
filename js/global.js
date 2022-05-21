@@ -1,13 +1,3 @@
-const repos = document.getElementById("repos");
-const followers = document.getElementById("followers");
-const following = document.getElementById("following");
-// const created = document.getElementById('created');
-const location1 = document.getElementById("lokation");
-const bio = document.getElementById("bio");
-const twitter_username = document.getElementById("twitter_username");
-const company = document.getElementById("company");
-const blog = document.getElementById("blog");
-
 let btn = document.querySelector("button");
 
 let getRandomCat = () => {
@@ -38,8 +28,6 @@ btn.addEventListener("click", getRandomCat);
     const { login, name, public_repos, followers, following, created_at, location, bio, twitter_username, company, blog,  avatar_url } = await response.json();
     const locationText = "Not Available";
     
-
-  
     
     tableHead.innerHTML = "<tr></tr>";
     tableBody.innerHTML = "";
