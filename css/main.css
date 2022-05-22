@@ -108,7 +108,6 @@ body {
     font-size: 1.8em;
     margin: 0;
     padding: 0;
-    border: 1px solid white;
 }
 
 .userLogin {
@@ -148,4 +147,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     /* margin: 10px; */
+}
+.githubAccount {
+    vertical-align: middle;
+    padding: 2px;
+}
+.reference {
+    
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.5;
+}
+.reference:hover {
+    opacity: 0.9;
 }
