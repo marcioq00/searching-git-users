@@ -20,15 +20,19 @@ body {
     height: 100%;  
     flex-wrap: wrap;
 }
-.box {
+ .box {
+    border-radius: 30px;
     display: flex;
+    min-height: 20em;
     height: 65%;
+    min-width: 25em;
     width: 60%;
     text-align: center;
     background-color: #1F2A48;
     flex-wrap: wrap;
 }
 .searchDevBox { 
+    border-radius: 30px 30px 0 0;
     background-color: #1F2A48;
     border-bottom: 1px solid #3a4a77;
     height: 20%;
@@ -96,6 +100,7 @@ body {
     display: flex;
     background-color: #151d30;
     border-radius: 1.3em;
+    min-width: 10em;
     width: 80%;
     height: 70%;
     flex-wrap: nowrap;
@@ -124,6 +129,7 @@ body {
     height: 50%;
     width: 24%;
     border-right: 1px solid #3a4a77;
+    border-radius: 0 0 0 30px;
 }
 
 .userName {
@@ -150,6 +156,7 @@ body {
     background-color: #1F2A48;
     height: 50%;
     width: 75%;
+    border-radius: 0 0 30px 0;
 }
 
 .socialDevBox {
