@@ -1,6 +1,21 @@
 const btn = document.querySelector("button");
 let githubURL = 'https://github.com/';
+let twitterURL = 'https://twitter.com/';
 
+
+const regExpForInput = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
+
+let checkInput = () => {
+    let userLogin = document.querySelector('#userLogin').value;
+    console.log(typeof(userLogin));
+  
+        if(regExpForInput.test(userLogin) == true){
+            console.log("Correct username");
+        } else {
+            console.log("Bad characters or the input value is empty");
+        }  
+
+};
 
  let searchDev = () => {
   const loginName = document.getElementById("userLogin").value;
@@ -44,17 +59,19 @@ let githubURL = 'https://github.com/';
             <img src="img/icons8-company-48.png" alt="comapny logo" class="socialDevBoxIcon">${data.company}
         </div>
         <div class="socialDevBoxParagraph2">
-            <a href="${data.blog}">
+            <a href="${data.blog}" class="referenceSite" target="_blank">
                 <img src="img/icons8-website-48.png" alt="website logo" class="socialDevBoxIcon">${data.blog}
             </a>
         </div>
         <div class="twitter">
-            <img src="img/icons8-twitter-48.png" alt="twitter logo" class="socialDevBoxIcon">${data.twitter_username}
+            <a href="${twitterURL + data.twitter_username}" target="_blank" class="referenceSite">
+                <img src="img/icons8-twitter-48.png" alt="twitter logo" class="socialDevBoxIcon">Twitter
+            </a>
         </div>
         <div class="location">
-            <img src="img/icons8-location-48.png" class="githubAccount" alt="location logo">${data.location}
+            <img src="img/icons8-location-48.png" class="socialDevBoxIcon" alt="location logo">${data.location}
         </div>`;
-      
+        checkInput();
     });
 };
 
