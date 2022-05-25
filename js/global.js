@@ -9,12 +9,15 @@ let checkInput = () => {
   if (regExpForInput.test(userLogin) == true) {
     searchDev();
   } else {
-    console.log("Bad characters or the input value is empty");
+    // console.log("Bad characters or the input value is empty");
+    showError();
   }
 };
 
 let showError = () => {
   //Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 };
 
 let searchDev = () => {
