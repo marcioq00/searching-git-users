@@ -5,8 +5,7 @@ let twitterURL = "https://twitter.com/";
 const regExpForInput = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
 
 let checkInput = () => {
-  let userLogin = document.querySelector("#userLogin").value;
-
+  let userLogin = document.querySelector("#user_login").value;
   if (regExpForInput.test(userLogin) == true) {
     searchDev();
   } else {
@@ -14,9 +13,13 @@ let checkInput = () => {
   }
 };
 
+let showError = () => {
+  //Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
+};
+
 let searchDev = () => {
-  const loginName = document.getElementById("userLogin").value;
-  const url = `https://api.github.com/users/${loginName}`;
+  let userLogin = document.querySelector("#user_login").value;
+  const url = `https://api.github.com/users/${userLogin}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
