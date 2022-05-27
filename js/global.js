@@ -4,21 +4,36 @@ let twitterURL = "https://twitter.com/";
 
 const regExpForInput = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
 
-let checkInput = () => {
-  let userLogin = document.querySelector("#user_login").value;
-  if (regExpForInput.test(userLogin) == true) {
-    searchDev();
-  } else {
-    // console.log("Bad characters or the input value is empty");
-    showError();
-  }
+let checkInput = (field) => {
+  const reg = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
+  return reg.test(field.value);
 };
 
-let showError = () => {
+let markFieldAsError = (field, show) => {
   //Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
+  // var popup = document.getElementById("myPopup");
+  // popup.classList.toggle("show");
+
+  if (show) {
+    field.classList.add("field-error");
+    const submit = document.querySelector("button");
+    document.querySelector("button").classList.remove("btn-active");
+    submit.disabled = true;
+  } else {
+    document.querySelector("button").classList.add("btn-active");
+    const submit = document.querySelector("button");
+    field.classList.remove("field-error");
+    submit.disabled = false;
+    //toggleErrorField(field, false);
+  }
 };
+const inputs = document.querySelectorAll("[required]");
+
+for (const el of inputs) {
+  el.addEventListener("input", (e) =>
+    markFieldAsError(e.target, !checkInput(e.target))
+  );
+}
 
 let searchDev = () => {
   let userLogin = document.querySelector("#user_login").value;
@@ -89,4 +104,4 @@ let searchDev = () => {
     });
 };
 
-btn.addEventListener("click", checkInput);
+btn.addEventListener("click", searchDev);
