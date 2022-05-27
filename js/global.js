@@ -2,7 +2,11 @@ const btn = document.querySelector("button");
 let githubURL = "https://github.com/";
 let twitterURL = "https://twitter.com/";
 
-const regExpForInput = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
+let createPopupError = () => {
+    const popup = document.getElementById("myPopup");
+    popup.classList.remove("hidden");
+    popup.classList.toggle("show");
+}
 
 let checkInput = (field) => {
   const reg = new RegExp(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i);
@@ -13,9 +17,7 @@ let markFieldAsError = (field, show) => {
   if (show) {
     field.classList.add("field-error");
     const submit = document.querySelector("button");
-    var popup = document.getElementById("myPopup");
-    popup.classList.remove("hidden");
-    popup.classList.toggle("show");
+    createPopupError();
     document.querySelector("button").classList.remove("btn-active");
     submit.disabled = true;
   } else {
