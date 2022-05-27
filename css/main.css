@@ -255,11 +255,12 @@ body {
   
   /* The actual popup */
   .popup .popuptext {
-    font-size: 12px;
+    font-size: 12.5px;
     visibility: hidden;
-    width: 300px;
-    background-color: #555;
-    color: #fff;
+    width: 450px;
+    background-color: #ffaba8;
+    border: 1px solid #e74943;
+    color: #24292f;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -268,6 +269,7 @@ body {
     bottom: 85%;
     left: 20%;
     margin-left: -80px; 
+    word-wrap: break-word;
   }
   /* Popup arrow */
   .popup .popuptext::after {
@@ -278,7 +280,7 @@ body {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: #ffaba8 transparent transparent transparent;
     
   }
   /* Toggle this class - hide and show the popup */
@@ -305,3 +307,8 @@ body {
     outline: none;
     /* box-shadow: 0 0 0 2px rgba(255,99,71, 0.3); */
 } 
+
+
+.hidden {
+    display: none;
+}

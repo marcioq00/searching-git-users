@@ -10,21 +10,21 @@ let checkInput = (field) => {
 };
 
 let markFieldAsError = (field, show) => {
-  //Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
-  // var popup = document.getElementById("myPopup");
-  // popup.classList.toggle("show");
-
   if (show) {
     field.classList.add("field-error");
     const submit = document.querySelector("button");
+    var popup = document.getElementById("myPopup");
+    popup.classList.remove("hidden");
+    popup.classList.toggle("show");
     document.querySelector("button").classList.remove("btn-active");
     submit.disabled = true;
   } else {
+    var popup = document.getElementById("myPopup");
+    popup.classList.add("hidden");
     document.querySelector("button").classList.add("btn-active");
     const submit = document.querySelector("button");
     field.classList.remove("field-error");
     submit.disabled = false;
-    //toggleErrorField(field, false);
   }
 };
 const inputs = document.querySelectorAll("[required]");
