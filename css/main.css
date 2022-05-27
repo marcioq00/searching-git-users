@@ -26,7 +26,7 @@ body {
  .box {
     border-radius: 30px;
     display: flex;
-    min-height: 25em;
+    min-height: 30em;
     height: 65%;
     min-width: 25em;
     width: 60%;
