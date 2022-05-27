@@ -16,9 +16,12 @@
     <div class="container">
         <div class="box">
             <div class="searchDevBox popup">
-                <input type="text" name="" id="user_login" class="searchingInput centeringElement" value="" placeholder="Type dev...">
+
+                <input type="text" name="" id="user_login" class="searchingInput centeringElement" required value="" placeholder="Type dev..." data-error-text="Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.">
+
+
                 <span class="popuptext" id="myPopup">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</span>
-                <button type="button" class="btn centeringElement">Search</button>
+                <button type="button" class="btn-disabled centeringElement" disabled>Search</button>
             </div>
             <div class="imageBox"></div>
             <div class="repositoryInformationBox">

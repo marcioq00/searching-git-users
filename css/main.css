@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     height: 100%;
     font-family: 'Lato', sans-serif;
@@ -50,10 +53,22 @@ body {
     border: none;
 }
 
-.btn {
+.btn-disabled {
     min-width: 30%;
     height: 45%;
-    background-color: hsl(218, 74%, 54%);;
+    background-color: hsl(218, 74%, 54%);
+    border-radius: 1.2em;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+.btn-active {
+    min-width: 30%;
+    height: 45%;
+    background-color: hsl(218, 74%, 54%);
     border-radius: 1.2em;
     cursor: pointer;
     border: none;
@@ -61,10 +76,12 @@ body {
     font-weight: bold;
     font-size: 1.6em;
     letter-spacing: 1px;
+    opacity: 1;
 }
-.btn:hover {
+
+.btn-active:hover {
     border: 2px solid white;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .imageBox {
@@ -229,7 +246,7 @@ body {
 .popup {
     position: relative;
     display: inline-block;
-    cursor: pointer;
+    /* cursor: pointer; */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -281,3 +298,10 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+
+   input.field-error {
+    /* border: 2px solid tomato; */
+    border: 2px solid #cf222e;
+    outline: none;
+    /* box-shadow: 0 0 0 2px rgba(255,99,71, 0.3); */
+} 
