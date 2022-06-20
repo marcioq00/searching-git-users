@@ -1,30 +1,36 @@
 * {
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     height: 100%;
     font-family: 'Lato', sans-serif;
 }
+
 body {
     background-color: #0D1117;
     color: #fff;
     font-size: 18px;
     margin: 0;
 }
+
 .centeringElement {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;  
+    height: 100%;
     flex-wrap: wrap;
 }
- .box {
-    border-radius: 30px;
+
+.box {
+    border-radius: 20px;
     display: flex;
     min-height: 30em;
     height: 65%;
@@ -34,12 +40,14 @@ body {
     background-color: #1F2A48;
     flex-wrap: wrap;
 }
-.searchDevBox { 
-    border-radius: 30px 30px 0 0;
+
+.searchDevBox {
+    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
     background-color: #1F2A48;
     border-bottom: 1px solid #3a4a77;
     height: 20%;
-    width: 100%;    
+    width: 100%;
 }
 
 .searchingInput {
@@ -57,7 +65,7 @@ body {
     min-width: 30%;
     height: 45%;
     background-color: hsl(218, 74%, 54%);
-    border-radius: 1.2em;
+    border-radius: 1em;
     border: none;
     color: white;
     font-weight: bold;
@@ -65,11 +73,12 @@ body {
     letter-spacing: 1px;
     opacity: 0.5;
 }
+
 .btn-active {
     min-width: 30%;
     height: 45%;
     background-color: hsl(218, 74%, 54%);
-    border-radius: 1.2em;
+    border-radius: 1em;
     cursor: pointer;
     border: none;
     color: white;
@@ -81,7 +90,7 @@ body {
 
 .btn-active:hover {
     border: 2px solid white;
-    /* opacity: 0.9; */
+    opacity: 0.9;
 }
 
 .imageBox {
@@ -104,14 +113,32 @@ body {
 }
 
 .repositoryInformationBox {
-    background-color: #1F2A48;
-    height: 30%;
-    width: 75%;
-    vertical-align: middle;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+    height: 30%;
+    width: 75%;
+    display: flex;
+    background-color: #1F2A48; 
+    text-align: center;
 }
+.profile-stat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    border-right: 1px solid black;
+  }
+  .stat-title {
+    font-size: 17px;
+    color: rgb(148, 145, 145);
+  }
+  .stat-value {
+    margin-top: -20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
 
 .repoInformation {
     display: flex;
@@ -121,24 +148,11 @@ body {
     width: 80%;
     height: 70%;
     flex-wrap: nowrap;
-}
-
-.repos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.informationCount {
-    opacity: 0.6;
-    width: 100%;   
-} 
-
-.repositoryCount {
-    font-weight: bold;
-    font-size: 1.3em;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    padding: 18px;
 }
 
 .bioInformationBox {
@@ -166,6 +180,7 @@ body {
     color: white;
     opacity: 0.8;
 }
+
 .referenceDevBox {
     display: flex;
     align-items: center;
@@ -185,8 +200,6 @@ body {
     display: grid;
     grid-template-columns: minmax(100px, 60%) minmax(100px, 40%);
     grid-template-rows: repeat(2, 1fr);
-     /* justify-items: center; */
-    /* justify-content: center;  */
 }
 
 .socialDevBoxIcon {
@@ -200,13 +213,17 @@ body {
     grid-column: 1;
     text-align: left;
     height: 100%;
+    /* background-color: lightgreen; */
 }
+
 .socialDevBoxParagraph2 {
     grid-row: 2;
     grid-column: 1;
     text-align: left;
-    height: 100%; 
+    height: 100%;
+    /* background-color: #e74943; */
 }
+
 .twitter {
     grid-row: 1;
     grid-column: 2;
@@ -214,47 +231,56 @@ body {
     height: 100%;
     text-align: left;
 }
+
 .location {
     grid-row: 2;
     grid-column: 2;
     width: 100%;
     height: 100%;
     text-align: left;
+    /* background-color: blue; */
+}
+
+.location-text {
+    background-color: rgb(204, 204, 121);
+    margin-right: 10px;
 }
 
 .githubAccount {
     vertical-align: middle;
     padding: 2px;
 }
+
 .reference {
     text-decoration: none;
     color: #fff;
     opacity: 0.5;
 }
+
 .reference:hover {
     opacity: 0.9;
 }
+
 .referenceSite {
     text-decoration: none;
     color: #fff;
 }
+
 .referenceSite:hover {
     opacity: 0.6;
 }
 
-
 .popup {
     position: relative;
     display: inline-block;
-    /* cursor: pointer; */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+}
+
+/* The actual popup */
+.popup .popuptext {
     font-size: 12.5px;
     visibility: hidden;
     width: 450px;
@@ -268,11 +294,12 @@ body {
     z-index: 1;
     bottom: 85%;
     left: 20%;
-    margin-left: -80px; 
+    margin-left: -80px;
     word-wrap: break-word;
-  }
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -281,33 +308,43 @@ body {
     border-width: 5px;
     border-style: solid;
     border-color: #ffaba8 transparent transparent transparent;
-    
-  }
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+}
 
-   input.field-error {
-    /* border: 2px solid tomato; */
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+input.field-error {
+     border: 2px solid tomato; 
     border: 2px solid #cf222e;
     outline: none;
-    /* box-shadow: 0 0 0 2px rgba(255,99,71, 0.3); */
-} 
-
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3); 
+}
 
 .hidden {
     display: none;
