@@ -46,17 +46,16 @@ let searchDev = () => {
       document.querySelector(
         ".imageBox"
       ).innerHTML = `<img src="${data.avatar_url}" alt="Avatar ${data.name}">`;
-      document.querySelector(
-        ".bioInformationBox"
-      ).innerHTML = `<p class="userName">${data.name}</p> 
-        <span class="userLogin">${data.login}</span> 
-        <p class="bioInformation"> ${data.bio}</p>
-        <p>
-            <a target="_blank" class="reference" href="${
-              githubURL + data.login
-            }"><img src="img/GitHub-Mark-32px.png" class="githubAccount">Github profile</a>
-        </p>
-        `;
+
+      document.querySelector(".userName").innerHTML = `${data.name}`;
+      document.querySelector(".userLogin").innerHTML = `${data.login}`;
+      document.querySelector(".bioInformation").innerHTML = `${data.bio}`;
+      let linkToGithub = githubURL + `${data.login}`;
+
+      document
+        .querySelector("#githubProfile")
+        .setAttribute("href", linkToGithub);
+
       document.querySelector("#repos").innerHTML = `${data.public_repos}`;
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
       document.querySelector("#following").innerHTML = `${data.following}`;

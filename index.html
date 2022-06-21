@@ -1,74 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Users</title>
     <script src="js/global.js" defer></script>
-    
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-        <div class="box">
-            <div class="searchDevBox popup">
+      <div class="box">
+        <div class="searchDevBox popup">
+          <input
+            type="text"
+            name=""
+            id="user_login"
+            class="searchingInput centeringElement"
+            required
+            value=""
+            placeholder="Type dev..."
+            data-error-text="Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen."
+          />
 
-                <input type="text" name="" id="user_login" class="searchingInput centeringElement" required value="" placeholder="Type dev..." data-error-text="Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.">
-
-                <span class="popuptext" id="myPopup">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</span>
-                <button type="button" class="btn-disabled centeringElement" disabled>Search</button>
-            </div>
-            <div class="imageBox">
-              <img src="img/Fintechtocat.png" alt="Logo github octocat">
-            </div>
-            <div class="repositoryInformationBox">
-              <div class="repoInformation">
-              <div class="profile-stat">
-                <p class="stat-title">Repos</p>
-                <p id="repos" class="stat-value">80</p>
-              </div>
-              <div class="profile-stat">
-                <p class="stat-title">Followers</p>
-                <p id="followers" class="stat-value">999</p>
-              </div>
-              <div class="profile-stat">
-                <p class="stat-title">Following</p>
-                <p id="following" class="stat-value">193</p>
-              </div>
-            </div>
-            </div>
-            <div class="bioInformationBox">
-            </div>
-            <div class="referenceDevBox">
-               <div class="socialDevBox">
-                <div class="socialDevBoxParagraph">
-                  <img src="img/icons8-company-48.png" alt="comapny logo" class="socialDevBoxIcon">
-                  <span class="companyName">Github</span>
-                </div>
-                <div class="socialDevBoxParagraph2">
-                  <a href="https://github.com" id="strona" class="referenceSite" target="_blank">
-                    <img src="img/icons8-website-48.png" alt="website logo" class="socialDevBoxIcon">
-                    <span class="web">https://github.com</span>
-                  </a>
-                </div>
-                <div class="twitter">
-                  <a href="" target="_blank" class="referenceSite" id="twitts">
-                    <img src="img/icons8-twitter-48.png" alt="twitter logo" class="socialDevBoxIcon">Twitter
-                </a>
-                </div>
-                <div class="location">
-                  <img src="img/icons8-location-48.png" class="socialDevBoxIcon" alt="location logo">
-                  <span class="location-text">Los Angeles</span>
-                </div>
-              </div>
-            </div>
+          <span class="popuptext" id="myPopup"
+            >Username may only contain alphanumeric characters or single
+            hyphens, and cannot begin or end with a hyphen.</span
+          >
+          <button type="button" class="btn-disabled centeringElement" disabled>
+            Search
+          </button>
         </div>
-       
+        <div class="imageBox">
+          <img src="img/Fintechtocat.png" alt="Logo github octocat" />
+        </div>
+        <div class="repositoryInformationBox">
+          <div class="repoInformation">
+            <div class="profile-stat">
+              <p class="stat-title">Repos</p>
+              <p id="repos" class="stat-value">80</p>
+            </div>
+            <div class="profile-stat">
+              <p class="stat-title">Followers</p>
+              <p id="followers" class="stat-value">999</p>
+            </div>
+            <div class="profile-stat">
+              <p class="stat-title">Following</p>
+              <p id="following" class="stat-value">193</p>
+            </div>
+          </div>
+        </div>
+        <div class="bioInformationBox">
+          <p class="userName">The octocat</p>
+          <span class="userLogin">@octocat</span>
+          <p class="bioInformation">In the ocean of secrets</p>
+          <p class="userPageGithub">
+            <a
+              href="https://github.com/marcioq00"
+              target="_blank"
+              class="reference"
+              id="githubProfile"
+            >
+              <img src="img/GitHub-Mark-32px.png" class="githubAccount" />Github
+              profile</a
+            >
+          </p>
+        </div>
+        <div class="referenceDevBox">
+          <div class="socialDevBox">
+            <div class="socialDevBoxParagraph">
+              <img
+                src="img/icons8-company-48.png"
+                alt="comapny logo"
+                class="socialDevBoxIcon"
+              />
+              <span class="companyName">Github</span>
+            </div>
+            <div class="socialDevBoxParagraph2">
+              <a
+                href="https://github.com"
+                id="strona"
+                class="referenceSite"
+                target="_blank"
+              >
+                <img
+                  src="img/icons8-website-48.png"
+                  alt="website logo"
+                  class="socialDevBoxIcon"
+                />
+                <span class="web">https://github.com</span>
+              </a>
+            </div>
+            <div class="twitter">
+              <a href="" target="_blank" class="referenceSite" id="twitts">
+                <img
+                  src="img/icons8-twitter-48.png"
+                  alt="twitter logo"
+                  class="socialDevBoxIcon"
+                />Twitter
+              </a>
+            </div>
+            <div class="location">
+              <img
+                src="img/icons8-location-48.png"
+                class="socialDevBoxIcon"
+                alt="location logo"
+              />
+              <span class="location-text">Los Angeles</span>
+            </div>
+          </div>
+        </div>
       </div>
-   
+    </div>
   </body>
 </html>
