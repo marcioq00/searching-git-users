@@ -37,7 +37,8 @@ body {
   min-width: 25em;
   width: 60%;
   text-align: center;
-  background-color: #1f2a48;
+  /* background-color: #1f2a48; */
+  background-color: green;
   flex-wrap: wrap;
 }
 
@@ -65,7 +66,7 @@ body {
   min-width: 30%;
   height: 45%;
   background-color: hsl(218, 74%, 54%);
-  border-radius: 1em;
+  border-radius: 0.5em;
   border: none;
   color: white;
   font-weight: bold;
@@ -283,7 +284,8 @@ body {
 .popup .popuptext {
   font-size: 12.5px;
   visibility: hidden;
-  width: 450px;
+  min-width: 280px;
+  max-width: 450px;
   background-color: #ffaba8;
   border: 1px solid #e74943;
   color: #24292f;
@@ -357,6 +359,7 @@ input.field-error {
     min-height: 50em;
     min-width: 50em;
     width: 55%;
+    background-color: green;
   }
   .searchDevBox {
     order: 1;
@@ -414,6 +417,12 @@ input.field-error {
     font-weight: bold;
     color: white;
   }
+  .popup .popuptext {
+    font-size: 11px;
+    min-width: 220px;
+    max-width: 280px;
+    left: 25%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -423,11 +432,30 @@ input.field-error {
 
   .box {
     margin: 20px;
+    padding: 20px;
     border-radius: 20px;
     min-height: 35em;
     height: 70%;
     min-width: 30em;
     width: 100%;
     background-color: #1f2a48;
+    /* background-color: green; */
+  }
+  .popup .popuptext {
+    font-size: 9px;
+    min-width: 100px;
+    max-width: 150px;
+    left: 35%;
+  }
+  .popup {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .reference {
+    display: none;
   }
 }
