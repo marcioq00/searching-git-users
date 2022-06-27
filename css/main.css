@@ -431,11 +431,11 @@ input.field-error {
   }
 
   .box {
-    margin: 20px;
-    padding: 20px;
+    margin: 30px;
+    /*  padding: 20px; */
     border-radius: 20px;
-    min-height: 35em;
-    height: 70%;
+    min-height: 40em;
+    height: 80%;
     min-width: 30em;
     width: 100%;
     background-color: #1f2a48;
@@ -455,7 +455,40 @@ input.field-error {
     -ms-user-select: none;
     user-select: none;
   }
-  .reference {
-    display: none;
+
+  .bioInformationBox {
+    text-align: left;
+    /* background-color: yellow; */
+    /* background-color: #1f2a48; */
+    height: 30%;
+    width: 60%;
+    /* border-right: 1px solid #3a4a77; */
+    border-radius: 0 0 0 30px;
+  }
+
+  .imageBox {
+    /* background-color: red; */
+    /* background-color: #1f2a48; */
+    /* height: 29%; */
+    height: 30%;
+    width: 40%;
+    /* height: 200px;
+    width: 200px; */
+    border-right: 1px solid #3a4a77;
+    border-bottom: 1px solid #3a4a77;
+  }
+
+  /*126+189*/
+  .imageBox img {
+    /* min-width: 60%;
+    min-height: 80%;
+    max-width: 70%;
+    max-height: 90%;
+    width: 100%; */
+    height: 130px;
+    min-width: 100px;
+    width: 130px;
+    /* right: -10px; */
+    /*transform: translateY(-50%); */
   }
 }
