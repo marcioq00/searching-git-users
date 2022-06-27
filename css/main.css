@@ -491,4 +491,17 @@ input.field-error {
     /* right: -10px; */
     /*transform: translateY(-50%); */
   }
+  .userName {
+    color: rgb(53, 221, 137);
+    font-size: 1.5em;
+    margin-top: 30px;
+    padding: 0;
+  }
+  .userLogin {
+  }
+  .bioInformation {
+    font-size: 1.4em;
+  }
+  .userPageGithub {
+  }
 }
