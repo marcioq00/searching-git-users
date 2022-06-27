@@ -36,7 +36,7 @@ for (const el of inputs) {
     markFieldAsError(e.target, !checkInput(e.target))
   );
 }
-
+//test
 let searchDev = () => {
   let userLogin = document.querySelector("#user_login").value;
   const url = `https://api.github.com/users/${userLogin}`;
