@@ -458,27 +458,18 @@ input.field-error {
 
   .bioInformationBox {
     text-align: left;
-    /* background-color: yellow; */
-    /* background-color: #1f2a48; */
     height: 30%;
     width: 60%;
-    /* border-right: 1px solid #3a4a77; */
     border-radius: 0 0 0 30px;
+    border: none;
   }
 
   .imageBox {
-    /* background-color: red; */
-    /* background-color: #1f2a48; */
-    /* height: 29%; */
     height: 30%;
     width: 40%;
-    /* height: 200px;
-    width: 200px; */
-    border-right: 1px solid #3a4a77;
-    border-bottom: 1px solid #3a4a77;
+    border: 0;
   }
 
-  /*126+189*/
   .imageBox img {
     /* min-width: 60%;
     min-height: 80%;
@@ -498,10 +489,14 @@ input.field-error {
     padding: 0;
   }
   .userLogin {
+    display: block;
+    margin-top: 3px;
   }
   .bioInformation {
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
   .userPageGithub {
+    margin-top: -10px;
+    margin-left: -18px;
   }
 }
