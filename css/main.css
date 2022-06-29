@@ -37,8 +37,8 @@ body {
   min-width: 25em;
   width: 60%;
   text-align: center;
-  /* background-color: #1f2a48; */
-  background-color: green;
+  background-color: #1f2a48;
+  /* background-color: green; */
   flex-wrap: wrap;
 }
 
@@ -359,7 +359,7 @@ input.field-error {
     min-height: 50em;
     min-width: 50em;
     width: 55%;
-    background-color: green;
+    /* background-color: green; */
   }
   .searchDevBox {
     order: 1;
@@ -435,10 +435,10 @@ input.field-error {
     /*  padding: 20px; */
     border-radius: 20px;
     min-height: 40em;
-    height: 80%;
+    height: 85%;
     min-width: 30em;
     width: 100%;
-    background-color: #1f2a48;
+    /* background-color: #1f2a48; */
     /* background-color: green; */
   }
   .popup .popuptext {
@@ -498,5 +498,47 @@ input.field-error {
   .userPageGithub {
     margin-top: -10px;
     margin-left: -18px;
+  }
+  .socialDevBox {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .socialDevBoxIcon {
+    /* height: 25px;
+    width: 25px; */
+  }
+  .socialDevBoxParagraph {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    background-color: yellow;
+  }
+  .socialDevBoxParagraph2 {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    background-color: cyan;
+  }
+  .twitter {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    background-color: rgb(114, 114, 72);
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    /* align-content: flex-start; */
+    height: 25%;
+    background-color: lightgreen;
+  }
+  .referenceDevBox {
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
