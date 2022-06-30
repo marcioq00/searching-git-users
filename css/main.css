@@ -15,7 +15,7 @@ body {
   margin: 0;
 }
 
-.centeringElement {
+.centering-element {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -50,7 +50,7 @@ body {
   width: 100%;
 }
 
-.searchingInput {
+.searching-input {
   width: 50%;
   height: 50%;
   background-color: hsl(218, 100%, 76%);
@@ -97,14 +97,13 @@ body {
   opacity: 0.9;
 }
 
-.imageBox {
+.image-box {
   background-color: #1f2a48;
   height: 29%;
   width: 24%;
-  /* border: 1px solid red; */
 }
 
-.imageBox img {
+.image-box img {
   min-width: 50%;
   min-height: 80%;
   max-width: 60%;
@@ -162,6 +161,7 @@ body {
   height: 50%;
   width: 24%;
   border-radius: 0 0 0 30px;
+  padding: 0 10px;
 }
 
 .userName {
@@ -209,14 +209,14 @@ body {
   margin-left: 10px;
 }
 
-.socialDevBoxParagraph {
+.company {
   grid-row: 1;
   grid-column: 1;
   text-align: left;
   height: 100%;
 }
 
-.socialDevBoxParagraph2 {
+.page {
   grid-row: 2;
   grid-column: 1;
   text-align: left;
@@ -277,7 +277,7 @@ body {
 }
 
 /* The actual popup */
-.popup .popuptext {
+.popup .popup-text {
   font-size: 12.5px;
   visibility: hidden;
   min-width: 280px;
@@ -297,7 +297,7 @@ body {
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+.popup .popup-text::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -349,7 +349,7 @@ input.field-error {
 
 @media (max-width: 1320px) {
   body {
-    font-size: 10px;
+    font-size: 11px;
   }
   .box {
     min-height: 50em;
@@ -360,23 +360,31 @@ input.field-error {
     order: 1;
     height: 15%;
   }
-  .imageBox {
+  .image-box {
     margin-left: 30px;
     order: 2;
-    height: 20%;
+    height: 25%;
     width: 30%;
-    /* margin-left: 30px;
-    width: 30%; */
-    /* background-color: yellow; */
+  }
+  .image-box img {
+    min-width: 130px;
+    min-height: 140px;
+    width: 200px;
+    height: 210px;
   }
   .bioInformationBox {
+    text-align: left;
     margin-right: 10px;
-    /* background-color: red; */
     width: 60%;
     order: 3;
-    height: 20%;
-    /* border: 5px solid green;
-    margin-right: 30px; */
+    height: 25%;
+  }
+  .userPageGithub {
+    margin-top: -5px;
+    margin-left: -20px;
+  }
+  .userName {
+    margin-top: 10px;
   }
   .repositoryInformationBox {
     order: 4;
@@ -415,7 +423,7 @@ input.field-error {
     font-weight: bold;
     color: white;
   }
-  .popup .popuptext {
+  .popup .popup-text {
     font-size: 11px;
     min-width: 220px;
     max-width: 280px;
@@ -437,7 +445,7 @@ input.field-error {
     width: 100%;
     background-color: #1f2a48;
   }
-  .popup .popuptext {
+  .popup .popup-text {
     font-size: 9px;
     min-width: 100px;
     max-width: 150px;
@@ -454,21 +462,22 @@ input.field-error {
 
   .bioInformationBox {
     text-align: left;
-    height: 30%;
+    height: 25%;
     width: 60%;
     border-radius: 0 0 0 30px;
     border: none;
     margin: 0;
   }
 
-  .imageBox {
-    height: 30%;
+  .image-box {
+    height: 25%;
+    max-height: 18em;
     width: 40%;
     border: 0;
     margin: 0;
   }
 
-  .imageBox img {
+  .image-box img {
     margin-left: 5%;
     height: 130px;
     min-width: 100px;
@@ -482,6 +491,7 @@ input.field-error {
     font-size: 1.5em;
     margin-top: 30px;
     padding: 0;
+    margin-top: 10%;
   }
   .userLogin {
     display: block;
@@ -500,12 +510,12 @@ input.field-error {
     display: flex;
     flex-direction: column;
   }
-  .socialDevBoxParagraph {
+  .company {
     display: flex;
     align-items: center;
     height: 25%;
   }
-  .socialDevBoxParagraph2 {
+  .page {
     display: flex;
     align-items: center;
     height: 25%;
