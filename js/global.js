@@ -38,18 +38,18 @@ for (const el of inputs) {
 }
 //test
 let searchDev = () => {
-  let userLogin = document.querySelector("#user_login").value;
+  let userLogin = document.querySelector("#user-login").value;
   const url = `https://api.github.com/users/${userLogin}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       document.querySelector(
-        ".imageBox"
+        ".image-box"
       ).innerHTML = `<img src="${data.avatar_url}" alt="Avatar ${data.name}">`;
 
-      document.querySelector(".userName").innerHTML = `${data.name}`;
-      document.querySelector(".userLogin").innerHTML = `${data.login}`;
-      document.querySelector(".bioInformation").innerHTML = `${data.bio}`;
+      document.querySelector(".user-name").innerHTML = `${data.name}`;
+      document.querySelector(".user-login").innerHTML = `${data.login}`;
+      document.querySelector(".bio-information").innerHTML = `${data.bio}`;
       let linkToGithub = githubURL + `${data.login}`;
 
       document
@@ -60,7 +60,7 @@ let searchDev = () => {
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
       document.querySelector("#following").innerHTML = `${data.following}`;
 
-      document.querySelector(".companyName").innerHTML = `${data.company}`;
+      document.querySelector(".company-name").innerHTML = `${data.company}`;
       let websiteURL = `${data.blog}`;
 
       function changeHref() {
