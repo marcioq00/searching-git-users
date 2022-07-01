@@ -40,7 +40,8 @@ for (const el of inputs) {
 let checkNull = (twitter) => {
   //console.log("p: " + twitter);
   if (twitter == "null") {
-    document.querySelector("#twitts").innerHTML = "huj";
+    document.querySelector("#twitts").innerHTML =
+      "This profile has no twitter account";
   } else {
     //console.log("masz twitera");
   }
