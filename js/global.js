@@ -21,7 +21,7 @@ let markFieldAsError = (field, show) => {
     document.querySelector("button").classList.remove("btn-active");
     submit.disabled = true;
   } else {
-    var popup = document.getElementById("myPopup");
+    const popup = document.getElementById("myPopup");
     popup.classList.add("hidden");
     document.querySelector("button").classList.add("btn-active");
     const submit = document.querySelector("button");
@@ -36,7 +36,16 @@ for (const el of inputs) {
     markFieldAsError(e.target, !checkInput(e.target))
   );
 }
-//test
+
+let checkNull = (twitter) => {
+  //console.log("p: " + twitter);
+  if (twitter == "null") {
+    document.querySelector("#twitts").innerHTML = "huj";
+  } else {
+    //console.log("masz twitera");
+  }
+};
+
 let searchDev = () => {
   let userLogin = document.querySelector("#user-login").value;
   const url = `https://api.github.com/users/${userLogin}`;
@@ -46,15 +55,34 @@ let searchDev = () => {
       document.querySelector(
         ".image-box"
       ).innerHTML = `<img src="${data.avatar_url}" alt="Avatar ${data.name}">`;
-
+      //console.table(data);
       document.querySelector(".user-name").innerHTML = `${data.name}`;
       document.querySelector(".user-login").innerHTML = `${data.login}`;
       document.querySelector(".bio-information").innerHTML = `${data.bio}`;
       let linkToGithub = githubURL + `${data.login}`;
-
+      let twiterName = `${data.twitter_username}`;
+      //console.log(data.twitter_username);
+      checkNull(twiterName);
+      const tab = data;
+      //console.table(tab);
       document
-        .querySelector("#githubProfile")
+        .querySelector("#github-profile")
         .setAttribute("href", linkToGithub);
+      console.log(typeof data);
+      // for (let test of Object.keys(tab)) {
+      //   let capital = tab[test];
+      //   console.log(test, capital);
+      // }
+      const schowek = [];
+      for (const [test, capital] of Object.entries(tab)) {
+        console.log(test, capital);
+        //console.log(capital);
+        if (capital == null) {
+          schowek.push(test);
+          alert("nie ma takich danych: " + test);
+        }
+      }
+      console.log(schowek);
 
       document.querySelector("#repos").innerHTML = `${data.public_repos}`;
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
