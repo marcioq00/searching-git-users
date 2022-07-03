@@ -38,15 +38,15 @@ for (const el of inputs) {
 }
 
 let checkNull = (twitter) => {
-  //console.log("p: " + twitter);
   if (twitter == "null") {
-    document.querySelector("#twitts").innerHTML =
-      "This profile has no twitter account";
+    // document.querySelector("#twitts").innerHTML =
+    //   "This profile has no twitter account";
   } else {
     //console.log("masz twitera");
   }
 };
-
+// company blog location email hireable bio twitter_username
+// blog jest ""
 let searchDev = () => {
   let userLogin = document.querySelector("#user-login").value;
   const url = `https://api.github.com/users/${userLogin}`;
@@ -62,10 +62,8 @@ let searchDev = () => {
       document.querySelector(".bio-information").innerHTML = `${data.bio}`;
       let linkToGithub = githubURL + `${data.login}`;
       let twiterName = `${data.twitter_username}`;
-      //console.log(data.twitter_username);
       checkNull(twiterName);
       const tab = data;
-      //console.table(tab);
       document
         .querySelector("#github-profile")
         .setAttribute("href", linkToGithub);
@@ -74,35 +72,44 @@ let searchDev = () => {
       //   let capital = tab[test];
       //   console.log(test, capital);
       // }
+      document.querySelector(".company").innerHTML = `${data.company}`;
+      document.querySelector(".location").innerHTML = `${data.location}`;
       const schowek = [];
-      for (const [test, capital] of Object.entries(tab)) {
-        console.log(test, capital);
-        //console.log(capital);
-        if (capital == null) {
-          schowek.push(test);
-          alert("nie ma takich danych: " + test);
-        }
-      }
-      console.log(schowek);
+
+      // console.log(schowek);
 
       document.querySelector("#repos").innerHTML = `${data.public_repos}`;
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
       document.querySelector("#following").innerHTML = `${data.following}`;
 
-      document.querySelector(".company-name").innerHTML = `${data.company}`;
       let websiteURL = `${data.blog}`;
 
       function changeHref() {
         document.getElementById("strona").setAttribute("href", websiteURL);
-        document.querySelector(".web").innerHTML = websiteURL;
+        document.querySelector(".blog").innerHTML = websiteURL;
       }
       changeHref();
       let twitts = `${data.twitter_username}`;
       document
         .getElementById("twitts")
         .setAttribute("href", twitterURL + twitts);
+      for (const [test, capital] of Object.entries(tab)) {
+        if (capital == null) {
+          schowek.push(test);
+          let saveName = test;
+          console.log(`#${CSS.escape(saveName)}`);
 
-      document.querySelector(".location-text").innerHTML = `${data.location}`;
+          document.querySelector(`.${CSS.escape(saveName)}`).innerHTML =
+            "Not available";
+        }
+      }
+      if (data.blog == "") {
+        console.log("nie posiada");
+        document.querySelector(".blog").innerHTML = "Not available";
+        console.log(typeof data.blog);
+      } else {
+        console.log("Posiada strone");
+      }
     });
 };
 
