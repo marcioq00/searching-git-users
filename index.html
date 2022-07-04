@@ -28,6 +28,7 @@
             value=""
             placeholder="Type dev..."
             data-error-text="Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen."
+            maxlength="30"
           />
 
           <span class="popup-text" id="myPopup">
@@ -57,15 +58,15 @@
           </div>
         </div>
         <div class="bioInformationBox">
-          <p class="userName">The octocat</p>
-          <span class="userLogin">@octocat</span>
-          <p class="bioInformation">In the ocean of secrets</p>
-          <p class="userPageGithub">
+          <p class="user-name">The octocat</p>
+          <span class="user-login">@octocat</span>
+          <p class="bio-information">In the ocean of secrets</p>
+          <p class="user-page-github">
             <a
               href="https://github.com/marcioq00"
               target="_blank"
               class="reference"
-              id="githubProfile"
+              id="github-profile"
             >
               <img
                 srcset="
@@ -84,7 +85,7 @@
         </div>
         <div class="referenceDevBox">
           <div class="socialDevBox">
-            <div class="company">
+            <div class="company1">
               <img
                 srcset="
                   img/icons8-company-24.png 480w,
@@ -96,13 +97,13 @@
                 alt="Play icon"
                 class="socialDevBoxIcon"
               />
-              <span class="company-name">Github</span>
+              <span class="company">Github</span>
             </div>
             <div class="page">
               <a
                 href="https://github.com"
                 id="strona"
-                class="referenceSite"
+                class="referenceSite blogas"
                 target="_blank"
               >
                 <img
@@ -116,7 +117,7 @@
                   alt="Play icon"
                   class="socialDevBoxIcon"
                 />
-                <span class="web">https://github.com</span>
+                <span class="blog">https://github.com</span>
               </a>
             </div>
             <div class="twitter">
@@ -132,10 +133,10 @@
                   alt="Play icon"
                   class="socialDevBoxIcon"
                 />
-                Twitter
+                <span class="twitter_username">Twitter</span>
               </a>
             </div>
-            <div class="location">
+            <div class="location1">
               <img
                 srcset="
                   img/icons8-location-24.png 480w,
@@ -147,7 +148,10 @@
                 alt="Play icon"
                 class="socialDevBoxIcon"
               />
-              <span class="location-text">Los Angeles</span>
+              <span class="location">Los Angeles</span>
+              <span
+                class="hireable email hidden name bio gravatar_id site_admin public_gists"
+              ></span>
             </div>
           </div>
         </div>
