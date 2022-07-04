@@ -164,20 +164,20 @@ body {
   padding: 0 10px;
 }
 
-.userName {
+.user-name {
   color: rgb(53, 221, 137);
   font-size: 1.8em;
   margin: 0;
   padding: 0;
 }
 
-.userLogin {
+.user-login {
   color: lightgray;
   opacity: 0.5;
   font-size: 0.9em;
 }
 
-.bioInformation {
+.bio-information {
   color: white;
   opacity: 0.8;
 }
@@ -209,7 +209,7 @@ body {
   margin-left: 10px;
 }
 
-.company {
+.company1 {
   grid-row: 1;
   grid-column: 1;
   text-align: left;
@@ -231,7 +231,7 @@ body {
   text-align: left;
 }
 
-.location {
+.location1 {
   grid-row: 2;
   grid-column: 2;
   width: 100%;
@@ -239,7 +239,7 @@ body {
   text-align: left;
 }
 
-.location-text {
+.location {
   margin-right: 10px;
 }
 
@@ -335,7 +335,9 @@ body {
     opacity: 1;
   }
 }
-
+.not-available {
+  color: red;
+}
 input.field-error {
   border: 2px solid tomato;
   border: 2px solid #cf222e;
@@ -379,11 +381,11 @@ input.field-error {
     order: 3;
     height: 25%;
   }
-  .userPageGithub {
+  .user-page-github {
     margin-top: -5px;
     margin-left: -20px;
   }
-  .userName {
+  .user-name {
     margin-top: 10px;
   }
   .repositoryInformationBox {
@@ -486,21 +488,21 @@ input.field-error {
   .bioInformationBox {
     margin: 0;
   }
-  .userName {
+  .user-name {
     color: rgb(53, 221, 137);
     font-size: 1.5em;
     margin-top: 30px;
     padding: 0;
     margin-top: 10%;
   }
-  .userLogin {
+  .user-login {
     display: block;
     margin-top: 3px;
   }
-  .bioInformation {
+  .bio-information {
     font-size: 1.1em;
   }
-  .userPageGithub {
+  .user-page-github {
     margin-top: -10px;
     margin-left: -18px;
   }
@@ -510,7 +512,7 @@ input.field-error {
     display: flex;
     flex-direction: column;
   }
-  .company {
+  .company1 {
     display: flex;
     align-items: center;
     height: 25%;
@@ -525,7 +527,7 @@ input.field-error {
     align-items: center;
     height: 25%;
   }
-  .location {
+  .location1 {
     display: flex;
     align-items: center;
     height: 25%;
