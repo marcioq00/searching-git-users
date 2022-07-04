@@ -37,16 +37,8 @@ for (const el of inputs) {
   );
 }
 
-let checkNull = (twitter) => {
-  if (twitter == "null") {
-    // document.querySelector("#twitts").innerHTML =
-    //   "This profile has no twitter account";
-  } else {
-    //console.log("masz twitera");
-  }
-};
-// company blog location email hireable bio twitter_username
-// blog jest ""
+let checkNull = (twitter) => {};
+
 let searchDev = () => {
   let userLogin = document.querySelector("#user-login").value;
   const url = `https://api.github.com/users/${userLogin}`;
@@ -56,27 +48,20 @@ let searchDev = () => {
       document.querySelector(
         ".image-box"
       ).innerHTML = `<img src="${data.avatar_url}" alt="Avatar ${data.name}">`;
-      //console.table(data);
+
       document.querySelector(".user-name").innerHTML = `${data.name}`;
       document.querySelector(".user-login").innerHTML = `${data.login}`;
       document.querySelector(".bio-information").innerHTML = `${data.bio}`;
       let linkToGithub = githubURL + `${data.login}`;
       let twiterName = `${data.twitter_username}`;
-      checkNull(twiterName);
+
       const tab = data;
       document
         .querySelector("#github-profile")
         .setAttribute("href", linkToGithub);
-      console.log(typeof data);
-      // for (let test of Object.keys(tab)) {
-      //   let capital = tab[test];
-      //   console.log(test, capital);
-      // }
       document.querySelector(".company").innerHTML = `${data.company}`;
       document.querySelector(".location").innerHTML = `${data.location}`;
       const schowek = [];
-
-      // console.log(schowek);
 
       document.querySelector("#repos").innerHTML = `${data.public_repos}`;
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
@@ -93,22 +78,24 @@ let searchDev = () => {
       document
         .getElementById("twitts")
         .setAttribute("href", twitterURL + twitts);
-      for (const [test, capital] of Object.entries(tab)) {
-        if (capital == null) {
-          schowek.push(test);
-          let saveName = test;
-          console.log(`#${CSS.escape(saveName)}`);
+      document.querySelector(".twitter_username").innerHTML = "Twitter";
 
+      for (const [test, capital] of Object.entries(tab)) {
+        let saveName = test;
+
+        if (capital == null) {
+          //schowek.push(test);
+          console.log(`#${CSS.escape(saveName)}`);
           document.querySelector(`.${CSS.escape(saveName)}`).innerHTML =
             "Not available";
         }
-      }
-      if (data.blog == "") {
-        console.log("nie posiada");
-        document.querySelector(".blog").innerHTML = "Not available";
-        console.log(typeof data.blog);
-      } else {
-        console.log("Posiada strone");
+        if (test == "blog" && capital == "") {
+          document.querySelector(".blog").innerHTML = "Not available";
+        }
+        if (test == "bio" && capital == null) {
+          document.querySelector(".bio-information").innerHTML =
+            "This profile has no bio";
+        }
       }
     });
 };
