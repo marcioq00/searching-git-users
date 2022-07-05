@@ -209,7 +209,7 @@ body {
   margin-left: 10px;
 }
 
-.company1 {
+.company-box {
   grid-row: 1;
   grid-column: 1;
   text-align: left;
@@ -231,7 +231,7 @@ body {
   text-align: left;
 }
 
-.location1 {
+.location-box {
   grid-row: 2;
   grid-column: 2;
   width: 100%;
@@ -276,7 +276,6 @@ body {
   user-select: none;
 }
 
-/* The actual popup */
 .popup .popup-text {
   font-size: 12.5px;
   visibility: hidden;
@@ -296,7 +295,6 @@ body {
   word-wrap: break-word;
 }
 
-/* Popup arrow */
 .popup .popup-text::after {
   content: "";
   position: absolute;
@@ -308,14 +306,12 @@ body {
   border-color: #ffaba8 transparent transparent transparent;
 }
 
-/* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -335,9 +331,7 @@ body {
     opacity: 1;
   }
 }
-.not-available {
-  color: red;
-}
+
 input.field-error {
   border: 2px solid tomato;
   border: 2px solid #cf222e;
@@ -407,7 +401,7 @@ input.field-error {
     min-height: 8em;
     height: 10%;
   }
-  /*  Informacje o repozytorium  */
+
   .profile-stat {
     display: flex;
     flex-direction: column;
@@ -512,7 +506,7 @@ input.field-error {
     display: flex;
     flex-direction: column;
   }
-  .company1 {
+  .company-box {
     display: flex;
     align-items: center;
     height: 25%;
@@ -527,7 +521,7 @@ input.field-error {
     align-items: center;
     height: 25%;
   }
-  .location1 {
+  .location-box {
     display: flex;
     align-items: center;
     height: 25%;
