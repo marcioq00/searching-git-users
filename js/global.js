@@ -1,6 +1,6 @@
 const btn = document.querySelector("button");
-let githubURL = "https://github.com/";
-let twitterURL = "https://twitter.com/";
+const githubURL = "https://github.com/";
+const twitterURL = "https://twitter.com/";
 
 let createPopupError = () => {
   const popup = document.getElementById("myPopup");
@@ -37,14 +37,27 @@ for (const el of inputs) {
   );
 }
 
-let checkNull = (twitter) => {};
+let changeHref = (websiteURL) => {
+  document.getElementById("web").setAttribute("href", websiteURL);
+  document.querySelector(".blog").innerHTML = websiteURL;
+};
+
+let changeTwitter = (twitts) => {
+  document.getElementById("twitts").setAttribute("href", twitterURL + twitts);
+  document.querySelector(".twitter_username").innerHTML = "Twitter";
+};
 
 let searchDev = () => {
-  let userLogin = document.querySelector("#user-login").value;
+  const userLogin = document.querySelector("#user-login").value;
   const url = `https://api.github.com/users/${userLogin}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      const linkToGithub = githubURL + `${data.login}`;
+      const websiteURL = `${data.blog}`;
+      const twitts = `${data.twitter_username}`;
+      const dataFromGithub = data;
+
       document.querySelector(
         ".image-box"
       ).innerHTML = `<img src="${data.avatar_url}" alt="Avatar ${data.name}">`;
@@ -52,47 +65,29 @@ let searchDev = () => {
       document.querySelector(".user-name").innerHTML = `${data.name}`;
       document.querySelector(".user-login").innerHTML = `${data.login}`;
       document.querySelector(".bio-information").innerHTML = `${data.bio}`;
-      let linkToGithub = githubURL + `${data.login}`;
-      let twiterName = `${data.twitter_username}`;
-
-      const tab = data;
       document
         .querySelector("#github-profile")
         .setAttribute("href", linkToGithub);
+
       document.querySelector(".company").innerHTML = `${data.company}`;
       document.querySelector(".location").innerHTML = `${data.location}`;
-      const schowek = [];
-
       document.querySelector("#repos").innerHTML = `${data.public_repos}`;
       document.querySelector("#followers").innerHTML = ` ${data.followers}`;
       document.querySelector("#following").innerHTML = `${data.following}`;
 
-      let websiteURL = `${data.blog}`;
+      changeHref(websiteURL);
+      changeTwitter(twitts);
 
-      function changeHref() {
-        document.getElementById("strona").setAttribute("href", websiteURL);
-        document.querySelector(".blog").innerHTML = websiteURL;
-      }
-      changeHref();
-      let twitts = `${data.twitter_username}`;
-      document
-        .getElementById("twitts")
-        .setAttribute("href", twitterURL + twitts);
-      document.querySelector(".twitter_username").innerHTML = "Twitter";
-
-      for (const [test, capital] of Object.entries(tab)) {
-        let saveName = test;
-
-        if (capital == null) {
-          //schowek.push(test);
-          console.log(`#${CSS.escape(saveName)}`);
+      for (const [index, value] of Object.entries(dataFromGithub)) {
+        let saveName = index;
+        if (value == null) {
           document.querySelector(`.${CSS.escape(saveName)}`).innerHTML =
             "Not available";
         }
-        if (test == "blog" && capital == "") {
+        if (index == "blog" && value == "") {
           document.querySelector(".blog").innerHTML = "Not available";
         }
-        if (test == "bio" && capital == null) {
+        if (index == "bio" && value == null) {
           document.querySelector(".bio-information").innerHTML =
             "This profile has no bio";
         }
